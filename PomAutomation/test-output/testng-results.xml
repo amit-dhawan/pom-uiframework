@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="22835" started-at="2021-06-03T14:25:16 IST" finished-at="2021-06-03T14:25:39 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="22835" started-at="2021-06-03T14:25:16 IST" finished-at="2021-06-03T14:25:39 IST">
+      <class name="com.sapient.pom.tests.Test_LoginPage">
+        <test-method status="PASS" signature="startUp()[pri:0, instance:com.sapient.pom.tests.Test_LoginPage@51e2adc7]" name="startUp" is-config="true" duration-ms="5637" started-at="2021-06-03T14:25:10 IST" finished-at="2021-06-03T14:25:16 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method status="PASS" signature="testLoginPage()[pri:0, instance:com.sapient.pom.tests.Test_LoginPage@51e2adc7]" name="testLoginPage" duration-ms="22790" started-at="2021-06-03T14:25:16 IST" finished-at="2021-06-03T14:25:39 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginPage -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.sapient.pom.tests.Test_LoginPage@51e2adc7]" name="cleanUp" is-config="true" duration-ms="159" started-at="2021-06-03T14:25:39 IST" finished-at="2021-06-03T14:25:39 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- com.sapient.pom.tests.Test_LoginPage -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
