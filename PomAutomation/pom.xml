@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.sapient</groupId>
-	<artifactId>mercury_pom</artifactId>
+	<artifactId>pomAutomation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>mercury_pom</name>
+	<name>pomAutomation</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>

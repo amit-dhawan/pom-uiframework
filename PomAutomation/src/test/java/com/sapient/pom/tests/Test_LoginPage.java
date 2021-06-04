@@ -15,16 +15,15 @@ public class Test_LoginPage extends BaseDriver {
 	@Test
 	public void testLoginPage() throws IOException, InterruptedException {
 		Utilities util = new Utilities();
-
 		LoginPage lp = new LoginPage(driver);
+		UserPage up = new UserPage(driver);
+
 		lp.clickOnMyAccountAndLogin();
 		lp.enterCredentials(util.getPropertyValue("username"), util.getPropertyValue("password"));
 		lp.clickOnLoginButton();
-
-		UserPage up = new UserPage(driver);
 		boolean headingPresent = up.isUserHeadingPresent();
-
-		Assert.assertTrue(headingPresent, "Hi Kate S should be present");
+		
+		Assert.assertTrue(headingPresent, "Hi Kate S - should be present");
 
 	}
 
