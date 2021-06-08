@@ -1,43 +1,39 @@
 package com.sapient.pom.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-	WebDriver driver;
+
+	@FindBy(xpath = "//input[@name='username']")
+	private WebElement txtBox_email;
+	@FindBy(xpath = "//input[@name='password']")
+	private WebElement txtBox_pswrd;
+	@FindBy(xpath = "//a[contains(.,'My Account')]")
+	private WebElement btn_myAccount;
+	@FindBy(xpath = "//a[text()='Login']")
+	private WebElement link_Login;
+	@FindBy(xpath = "//button[text()='Login']")
+	private WebElement btn_Login;
 
 	public LoginPage(WebDriver driver) {
-		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 
 	public void enterCredentials(String username, String password) throws InterruptedException {
-
-		WebElement txtBox_email = driver.findElement(By.xpath("//input[@name='username']"));
-
-		WebElement txtBox_pswrd = driver.findElement(By.xpath("//input[@name='password']"));
-
 		txtBox_email.sendKeys(username);
-
 		txtBox_pswrd.sendKeys(password);
-
 	}
 
 	public void clickOnMyAccountAndLogin() {
-
-		WebElement btn_myAccount = driver.findElement(By.xpath("//a[contains(.,'My Account')]"));
 		btn_myAccount.click();
-
-		WebElement link_Login = driver.findElement(By.xpath("//a[text()='Login']"));
 		link_Login.click();
-
 	}
 
 	public void clickOnLoginButton() {
-
-		WebElement btn_Login = driver.findElement(By.xpath("//button[text()='Login']"));
 		btn_Login.click();
-
 	}
 
 }

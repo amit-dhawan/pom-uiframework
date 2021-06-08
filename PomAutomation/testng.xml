@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="1" name="Test">
-    <classes>
-      <class name="com.sapient.pom.tests.Test_LoginPage"/>
-    </classes>
-  </test> <!-- Test -->
+	<listeners>
+
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+
+		<listener
+			class-name="org.uncommons.reportng.JUnitXMLReporter" />
+
+		<listener
+			class-name="com.sapient.pom.utilities.TestListeners" />
+
+	</listeners>
+
+
+	<test thread-count="1" name="Test">
+		<classes>
+			<class name="com.sapient.pom.tests.Test_LoginPage" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

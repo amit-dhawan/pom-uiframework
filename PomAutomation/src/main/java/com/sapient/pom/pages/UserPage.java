@@ -1,20 +1,19 @@
 package com.sapient.pom.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class UserPage {
 
-	WebDriver driver;
-	
+@FindBy(xpath = "//h3[contains(text(), 'Neo')]")
+private WebElement heading_username;
 	public UserPage(WebDriver driver) {
-		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 
 	public boolean isUserHeadingPresent() {
-		WebElement heading_username = driver.findElement(By.xpath("//h3[text()='Hi, Kate S']"));
-
 		return heading_username.isDisplayed();
 
 	}

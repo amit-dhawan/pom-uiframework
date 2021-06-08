@@ -15,13 +15,12 @@ public class BaseDriver {
 
 	@BeforeSuite
 	public void startUp() throws IOException, InterruptedException {
-
 		Utilities util = new Utilities();
 		driver = util.launchDriver();
-		driver.get(util.getPropertyValue("url"));
+		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+		driver.get(util.getPropertyValue("url"));
 
 	}
 
